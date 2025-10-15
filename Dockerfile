@@ -3,6 +3,8 @@ FROM python:3.14-slim
 COPY dan-buildbox.bazelrc /root/.bazelrc
 COPY llm-dan-buildbox-tools /llm-dan-buildbox-tools
 
+RUN mkdir -p /root/.local/bin
+ENV PATH="$PATH:/root/.local/bin"
 RUN \
 	mkdir -p /workspace && \
 	mkdir -p /root/.aider && \
