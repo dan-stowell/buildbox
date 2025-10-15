@@ -90,6 +90,7 @@ def replace_in_file(path: str, old: str, new: str):
 def register_tools(register):
     register(bazel)
     register(rg)
+    register(sed)
     register(read_file)
     register(write_file)
     register(replace_in_file)
