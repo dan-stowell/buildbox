@@ -14,12 +14,15 @@ container run \
     --env OPENROUTER_API_KEY="$OPENROUTER_API_KEY" \
     --env OPENROUTER_KEY="$OPENROUTER_KEY" \
     --volume="$(pwd)/workspace":/workspace \
-    --workdir /workspace/go-jsonnet \ # cloned ahead of time
+    --volume="$(pwd)/workspace/aider":/root/.aider \
+    --workdir /workspace/go-jsonnet  \
     dan-buildbox:$(git rev-parse --short HEAD) \
     llm prompt \
+        --tool aider \
+        --tool bash \
         --tool bazelisk \
         --tools-debug \
         --chain-limit 0 \
         --model openrouter/openai/gpt-5-codex \
-        "Can you list the Bazel test targets under this repo?"
+        "Can you see any missing unit tests in this repo (go-jsonnet)?"
 ```
