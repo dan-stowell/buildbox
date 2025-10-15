@@ -1,4 +1,4 @@
-FROM python-3.14:slim
+FROM python:3.14-slim
 
 COPY dan-buildbox.bazelrc /root/.bazelrc
 COPY llm-dan-buildbox-tools /llm-dan-buildbox-tools
