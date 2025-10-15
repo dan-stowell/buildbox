@@ -5,7 +5,7 @@ COPY llm-dan-buildbox-tools /llm-dan-buildbox-tools
 
 RUN \
 	apt-get update && \
-	apt-get install -y ripgrep && \
+	apt-get install -y build-essential git ripgrep && \
 	apt-get clean && \
 	rm -rf /var/lib/apt/lists/* && \
 	mkdir -p /workspace && \
