@@ -12,7 +12,8 @@ RUN \
 	python3 -c "import urllib.request; urllib.request.urlretrieve('https://github.com/bazelbuild/bazelisk/releases/download/v1.27.0/bazelisk-linux-arm64', 'bazelisk')" && \
 	mv bazelisk /usr/local/bin/bazelisk && \
 	chmod +x /usr/local/bin/bazelisk && \
-	pip install aider-chat
+	pip install aider-install && \
+	aider-install
 
 ENV \
 	LLM_USER_PATH=/workspace/llm_user_path \
