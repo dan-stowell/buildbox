@@ -1,0 +1,6 @@
+[project]
+name = "llm-dan-buildbox-tools"
+version = "0.0.1"
+
+[project.entry-points.llm]
+dan_buildbox_tools = "llm_dan_buildbox_tools"

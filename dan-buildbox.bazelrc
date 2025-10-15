@@ -1,0 +1,1 @@
+startup --output_user_root=/workspace/bazel_output_user_root
