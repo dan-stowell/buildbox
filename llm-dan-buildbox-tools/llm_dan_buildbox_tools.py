@@ -16,7 +16,7 @@ def bash(args: list[str]) -> tuple[int, str]:
     result = subprocess.run(["bash"] + args, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
     return result.returncode, result.stdout
 
-def bash(args: list[str]) -> tuple[int, str]:
+def aider(args: list[str]) -> tuple[int, str]:
     """
     Runs aider on the input args and returns the exit code and combined stdout and stderr.
     """
